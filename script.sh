@@ -37,7 +37,7 @@ for i in $(ls $theme -tc)
        break
   done;
 
-theme=$theme'/'$name_dir
+theme=$theme$name_dir
 #path final do theme
 theme=$(find $theme -name theme.txt)
 
@@ -45,4 +45,6 @@ theme=$(find $theme -name theme.txt)
 sed -i '/^GRUB_THEME/d' $config
 echo "GRUB_THEME="$theme >> $config
 
-#grub-mkconfig -o /boot/grub/grub.cfg
+#$grub-mkconfig -o /boot/grub/grub.cfg
+echo "Upgradeble grub"
+$(update-grub2)

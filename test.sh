@@ -14,5 +14,5 @@
 
 #sed "/theme/! echo foi" "/home/luckfish/codigos/codigos-c/shell/test.sh"
 #
-#sed "/^GRUB_THEEME/d"
-grub-mkconfig -o /boot/grub/grub.cfg
+#sed "/^GRUB_THEEME/
+$(update-grub2)
