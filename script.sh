@@ -29,6 +29,8 @@ if [ $(echo $1 | awk '{print substr($0, 1, 1)}') != '/' ]; then
     path=$PWD'/'$path
 fi
 
+echo "Copying files to destination..."
+
 cp -r $path $theme
 
 for i in $(ls $theme -tc)
@@ -48,3 +50,4 @@ echo "GRUB_THEME="$theme >> $config
 #$grub-mkconfig -o /boot/grub/grub.cfg
 echo "Upgradeble grub"
 $(update-grub2)
+echo "Finish"

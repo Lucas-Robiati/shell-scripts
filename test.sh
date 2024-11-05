@@ -15,4 +15,7 @@
 #sed "/theme/! echo foi" "/home/luckfish/codigos/codigos-c/shell/test.sh"
 #
 #sed "/^GRUB_THEEME/
-$(update-grub2)
+for i in $(seq 0 10 100)
+do
+        echo "$i"
+done
