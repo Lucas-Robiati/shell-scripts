@@ -29,8 +29,8 @@ echo 50 | !dialog:p
 acao=$(dialog --stdout \
        --menu "test" \
        0 0 0\
-       1 "se quise sim" \
-       2 "se quise nao")
+       se_quiser_sim "se quise sim" \
+       se_quiser_nao "se quise nao")
 
 case "$acao" in se_quiser_sim)
         temp=$(mktemp -t lixo)
